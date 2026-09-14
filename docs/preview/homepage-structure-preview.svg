@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="2800" viewBox="0 0 1440 2800" role="img" aria-labelledby="title desc">
+  <title id="title">IT Cube Homepage Structure Preview</title>
+  <desc id="desc">Schematic preview of homepage sections: header, hero, program, skills, audience, benefits, news, FAQ, CTA and footer.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f4f7ff; }
+      .card { fill: #ffffff; stroke: #c8d5ff; stroke-width: 2; }
+      .head { fill: #102a67; }
+      .headText { fill: #ffffff; font: 700 28px Arial, sans-serif; }
+      .label { fill: #1b2a55; font: 700 30px Arial, sans-serif; }
+      .sub { fill: #4a5e94; font: 500 20px Arial, sans-serif; }
+      .small { fill: #4a5e94; font: 500 18px Arial, sans-serif; }
+      .chip { fill: #e6eeff; stroke: #c8d5ff; stroke-width: 1.5; }
+      .chipText { fill: #1c3f99; font: 700 18px Arial, sans-serif; }
+      .cta { fill: #2b63ff; }
+      .ctaText { fill: #ffffff; font: 700 20px Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1440" height="2800" />
+
+  <rect class="head" x="0" y="0" width="1440" height="90" />
+  <text class="headText" x="90" y="57">IT-Cube | Menu | Apply Now</text>
+
+  <rect class="card" x="90" y="130" width="1260" height="430" rx="18" />
+  <text class="label" x="130" y="190">1) Hero Section</text>
+  <text class="sub" x="130" y="230">ENROLLMENT FOR THE NEW SCHOOL YEAR IN IT-CUBE IS OPEN</text>
+  <rect class="chip" x="130" y="255" width="140" height="40" rx="20" />
+  <text class="chipText" x="155" y="281">Free</text>
+  <rect class="chip" x="285" y="255" width="130" height="40" rx="20" />
+  <text class="chipText" x="320" y="281">Age 7-18</text>
+  <rect class="chip" x="430" y="255" width="220" height="40" rx="20" />
+  <text class="chipText" x="455" y="281">Limited Places</text>
+  <text class="small" x="130" y="330">Value proposition and CTA for parents and teens</text>
+  <rect class="cta" x="130" y="360" width="280" height="54" rx="12" />
+  <text class="ctaText" x="165" y="394">Apply for Training</text>
+  <rect class="card" x="840" y="205" width="450" height="310" rx="14" />
+  <text class="sub" x="875" y="280">Illustration / photo from classes</text>
+  <text class="small" x="875" y="315">Students, laptops, coding, mentor support</text>
+
+  <rect class="card" x="90" y="600" width="1260" height="220" rx="18" />
+  <text class="label" x="130" y="670">2) About Program</text>
+  <text class="sub" x="130" y="710">Brief text about hands-on learning and projects.</text>
+
+  <rect class="card" x="90" y="860" width="1260" height="280" rx="18" />
+  <text class="label" x="130" y="930">3) Learning Process</text>
+  <text class="small" x="130" y="970">4 cards: start -> practice -> team project -> presentation</text>
+
+  <rect class="card" x="90" y="1180" width="1260" height="360" rx="18" />
+  <text class="label" x="130" y="1250">4) Skills</text>
+  <text class="small" x="130" y="1290">Logic, engineering mindset, teamwork, project building, coding</text>
+
+  <rect class="card" x="90" y="1580" width="1260" height="250" rx="18" />
+  <text class="label" x="130" y="1650">5) Who It Is For</text>
+  <text class="small" x="130" y="1690">Checklist for beginners, tech fans, career-oriented teens</text>
+
+  <rect class="card" x="90" y="1865" width="1260" height="190" rx="18" />
+  <text class="label" x="130" y="1930">6) Benefits Badges</text>
+  <text class="small" x="130" y="1970">Free | Full school year | Practical approach | Limited places</text>
+
+  <rect class="card" x="90" y="2090" width="1260" height="220" rx="18" />
+  <text class="label" x="130" y="2160">7) News</text>
+  <text class="small" x="130" y="2200">Last 3 posts + link to all news</text>
+
+  <rect class="card" x="90" y="2345" width="1260" height="180" rx="18" />
+  <text class="label" x="130" y="2408">8) FAQ</text>
+  <text class="small" x="130" y="2446">Experience needed? Cost? How to apply?</text>
+
+  <rect class="head" x="90" y="2555" width="1260" height="150" rx="18" />
+  <text class="headText" x="130" y="2622">9) Final CTA - Apply Now</text>
+  <text class="small" x="130" y="2660" fill="#dce6ff">Strong call to action with large button</text>
+
+  <rect class="card" x="90" y="2725" width="1260" height="65" rx="18" />
+  <text class="small" x="130" y="2766">10) Footer: website, contacts, legal info</text>
+</svg>
