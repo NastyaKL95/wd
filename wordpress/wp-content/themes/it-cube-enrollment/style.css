@@ -582,7 +582,8 @@ h2 {
   gap: 8px;
 }
 
-.pagination .page-numbers {
+.pagination a.page-numbers,
+.pagination span.page-numbers {
   display: inline-flex;
   min-width: 36px;
   height: 36px;
@@ -595,7 +596,7 @@ h2 {
   background: #fff;
 }
 
-.pagination .current {
+.pagination span.current {
   background: #e8eeff;
   border-color: #c6d7ff;
 }

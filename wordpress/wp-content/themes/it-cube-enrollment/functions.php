@@ -56,6 +56,37 @@ add_action('after_setup_theme', 'it_cube_enrollment_setup');
  */
 function it_cube_enrollment_on_activation()
 {
+    it_cube_enrollment_ensure_default_options();
+
+    it_cube_enrollment_prepare_pages();
+    it_cube_enrollment_prepare_default_menu();
+    update_option('it_cube_site_bootstrapped', 'yes');
+}
+add_action('after_switch_theme', 'it_cube_enrollment_on_activation');
+
+/**
+ * Runs one-time bootstrap if theme was updated in-place.
+ */
+function it_cube_enrollment_maybe_bootstrap_site()
+{
+    it_cube_enrollment_ensure_default_options();
+
+    $bootstrapped = get_option('it_cube_site_bootstrapped', 'no');
+    if ($bootstrapped === 'yes') {
+        return;
+    }
+
+    it_cube_enrollment_prepare_pages();
+    it_cube_enrollment_prepare_default_menu();
+    update_option('it_cube_site_bootstrapped', 'yes');
+}
+add_action('init', 'it_cube_enrollment_maybe_bootstrap_site');
+
+/**
+ * Creates missing options with defaults.
+ */
+function it_cube_enrollment_ensure_default_options()
+{
     $defaults = it_cube_enrollment_default_options();
 
     foreach ($defaults as $key => $value) {
@@ -63,11 +94,7 @@ function it_cube_enrollment_on_activation()
             add_option($key, $value);
         }
     }
-
-    it_cube_enrollment_prepare_pages();
-    it_cube_enrollment_prepare_default_menu();
 }
-add_action('after_switch_theme', 'it_cube_enrollment_on_activation');
 
 /**
  * Ensures key pages exist and binds static front page.
