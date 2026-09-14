@@ -84,17 +84,7 @@ INSERT INTO wp_options (option_name, option_value, autoload)
 VALUES ('page_on_front', CAST(@front_page_id AS CHAR), 'yes')
 ON DUPLICATE KEY UPDATE option_value = CAST(@front_page_id AS CHAR);
 
--- 4) Базовые контактные поля для футера (можно заменить в админке или SQL).
-INSERT INTO wp_options (option_name, option_value, autoload)
-VALUES ('it_cube_contact_phone', '[добавить номер]', 'yes')
-ON DUPLICATE KEY UPDATE option_value = '[добавить номер]';
-
-INSERT INTO wp_options (option_name, option_value, autoload)
-VALUES ('it_cube_contact_email', '[добавить e-mail]', 'yes')
-ON DUPLICATE KEY UPDATE option_value = '[добавить e-mail]';
-
-INSERT INTO wp_options (option_name, option_value, autoload)
-VALUES ('it_cube_contact_address', '[добавить адрес]', 'yes')
-ON DUPLICATE KEY UPDATE option_value = '[добавить адрес]';
+-- 4) Контакты и SEO настраиваются в админке WordPress:
+-- Внешний вид -> Настройки IT-Куб.
 
 COMMIT;
