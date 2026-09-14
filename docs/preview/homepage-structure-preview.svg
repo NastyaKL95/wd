@@ -1,86 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="2800" viewBox="0 0 1440 2800" role="img" aria-labelledby="title desc">
-  <title id="title">@52LN AB@C:BC@K 3;02=>9 AB@0=8FK IT-C1</title>
-  <desc id="desc">!E5<0B8G=>5 87>1@065=85 1;>:>2 3;02=>9 AB@0=8FK: H0?:0, ?5@2K9 M:@0=, ?@>3@0<<0, =02K:8, 0C48B>@8O, ?@58<CI5AB20, =>2>AB8, FAQ, CTA 8 DCB5@.</desc>
+  <title id="title">IT Cube Homepage Structure Preview</title>
+  <desc id="desc">Schematic preview of homepage sections: header, hero, program, skills, audience, benefits, news, FAQ, CTA and footer.</desc>
   <defs>
     <style>
       .bg { fill: #f4f7ff; }
-      .card { fill: #ffffff; stroke: #c8d5ff; stroke-width: 2; rx: 18; }
+      .card { fill: #ffffff; stroke: #c8d5ff; stroke-width: 2; }
       .head { fill: #102a67; }
-      .headText { fill: #ffffff; font: 700 28px Inter, Arial, sans-serif; }
-      .label { fill: #1b2a55; font: 700 30px Inter, Arial, sans-serif; }
-      .sub { fill: #4a5e94; font: 500 20px Inter, Arial, sans-serif; }
-      .small { fill: #4a5e94; font: 500 18px Inter, Arial, sans-serif; }
-      .chip { fill: #e6eeff; stroke: #c8d5ff; stroke-width: 1.5; rx: 30; }
-      .chipText { fill: #1c3f99; font: 700 18px Inter, Arial, sans-serif; }
-      .cta { fill: #2b63ff; rx: 12; }
-      .ctaText { fill: #ffffff; font: 700 20px Inter, Arial, sans-serif; }
+      .headText { fill: #ffffff; font: 700 28px Arial, sans-serif; }
+      .label { fill: #1b2a55; font: 700 30px Arial, sans-serif; }
+      .sub { fill: #4a5e94; font: 500 20px Arial, sans-serif; }
+      .small { fill: #4a5e94; font: 500 18px Arial, sans-serif; }
+      .chip { fill: #e6eeff; stroke: #c8d5ff; stroke-width: 1.5; }
+      .chipText { fill: #1c3f99; font: 700 18px Arial, sans-serif; }
+      .cta { fill: #2b63ff; }
+      .ctaText { fill: #ffffff; font: 700 20px Arial, sans-serif; }
     </style>
   </defs>
 
   <rect class="bg" x="0" y="0" width="1440" height="2800" />
 
-  <!-- Header -->
   <rect class="head" x="0" y="0" width="1440" height="90" />
-  <text class="headText" x="90" y="57">IT-C1 | 5=N | >40BL 70O2:C</text>
+  <text class="headText" x="90" y="57">IT-Cube | Menu | Apply Now</text>
 
-  <!-- Hero -->
-  <rect class="card" x="90" y="130" width="1260" height="430" />
-  <text class="label" x="130" y="190">1) 5@2K9 M:@0= (Hero)</text>
-  <text class="sub" x="130" y="230">!" " !,  + #'+   IT-#!</text>
-  <rect class="chip" x="130" y="255" width="140" height="40" />
-  <text class="chipText" x="155" y="281">5A?;0B=></text>
-  <rect class="chip" x="285" y="255" width="130" height="40" />
-  <text class="chipText" x="320" y="281">7-18 ;5B</text>
-  <rect class="chip" x="430" y="255" width="220" height="40" />
-  <text class="chipText" x="455" y="281">5AB0 >3@0=8G5=K</text>
-  <text class="small" x="130" y="330">>4703>;>2>: + :>@>B:>5 >?8A0=85 F5==>AB8 ?@>3@0<<K</text>
-  <rect class="cta" x="130" y="360" width="280" height="54" />
-  <text class="ctaText" x="165" y="394">0?8A0BLAO =0 >1CG5=85</text>
-  <rect class="card" x="840" y="205" width="450" height="310" />
-  <text class="sub" x="875" y="280">;;NAB@0F8O / D>B> 70=OB89</text>
-  <text class="small" x="875" y="315">5B8, =>CB1C:8, :>4, =0AB02=8:</text>
+  <rect class="card" x="90" y="130" width="1260" height="430" rx="18" />
+  <text class="label" x="130" y="190">1) Hero Section</text>
+  <text class="sub" x="130" y="230">ENROLLMENT FOR THE NEW SCHOOL YEAR IN IT-CUBE IS OPEN</text>
+  <rect class="chip" x="130" y="255" width="140" height="40" rx="20" />
+  <text class="chipText" x="155" y="281">Free</text>
+  <rect class="chip" x="285" y="255" width="130" height="40" rx="20" />
+  <text class="chipText" x="320" y="281">Age 7-18</text>
+  <rect class="chip" x="430" y="255" width="220" height="40" rx="20" />
+  <text class="chipText" x="455" y="281">Limited Places</text>
+  <text class="small" x="130" y="330">Value proposition and CTA for parents and teens</text>
+  <rect class="cta" x="130" y="360" width="280" height="54" rx="12" />
+  <text class="ctaText" x="165" y="394">Apply for Training</text>
+  <rect class="card" x="840" y="205" width="450" height="310" rx="14" />
+  <text class="sub" x="875" y="280">Illustration / photo from classes</text>
+  <text class="small" x="875" y="315">Students, laptops, coding, mentor support</text>
 
-  <!-- Program -->
-  <rect class="card" x="90" y="600" width="1260" height="220" />
-  <text class="label" x="130" y="670">2)  ?@>3@0<<5</text>
-  <text class="sub" x="130" y="710">>@>B:89 B5:AB > ?@0:B8:5, ?@>5:B0E, :><0=4=>9 @01>B5 8 @57C;LB0B5.</text>
+  <rect class="card" x="90" y="600" width="1260" height="220" rx="18" />
+  <text class="label" x="130" y="670">2) About Program</text>
+  <text class="sub" x="130" y="710">Brief text about hands-on learning and projects.</text>
 
-  <!-- Process -->
-  <rect class="card" x="90" y="860" width="1260" height="280" />
-  <text class="label" x="130" y="930">3) 0: ?@>E>48B >1CG5=85</text>
-  <text class="small" x="130" y="970">4 :0@B>G:8: AB0@B ’ ?@0:B8:0 ’ ?@>5:BK ’ ?@575=B0F8O</text>
+  <rect class="card" x="90" y="860" width="1260" height="280" rx="18" />
+  <text class="label" x="130" y="930">3) Learning Process</text>
+  <text class="small" x="130" y="970">4 cards: start -> practice -> team project -> presentation</text>
 
-  <!-- Skills -->
-  <rect class="card" x="90" y="1180" width="1260" height="360" />
-  <text class="label" x="130" y="1250">4) '5<C CG0BAO</text>
-  <text class="small" x="130" y="1290">0@B>G:8 =02K:>2: ;>38:0, 8=65=5@=>5 <KH;5=85, :><0=40, ?@>5:BK, ?@>3@0<<8@>20=85</text>
+  <rect class="card" x="90" y="1180" width="1260" height="360" rx="18" />
+  <text class="label" x="130" y="1250">4) Skills</text>
+  <text class="small" x="130" y="1290">Logic, engineering mindset, teamwork, project building, coding</text>
 
-  <!-- Audience -->
-  <rect class="card" x="90" y="1580" width="1260" height="250" />
-  <text class="label" x="130" y="1650">5) ><C ?>4>94QB</text>
-  <text class="small" x="130" y="1690">!?8A>: A 30;>G:0<8: =>28G:8, ;N18B5;8 30465B>2, ?@>D>@85=B0F8O, 15A?;0B=></text>
+  <rect class="card" x="90" y="1580" width="1260" height="250" rx="18" />
+  <text class="label" x="130" y="1650">5) Who It Is For</text>
+  <text class="small" x="130" y="1690">Checklist for beginners, tech fans, career-oriented teens</text>
 
-  <!-- Benefits -->
-  <rect class="card" x="90" y="1865" width="1260" height="190" />
-  <text class="label" x="130" y="1930">6) @58<CI5AB20 (159468)</text>
-  <text class="small" x="130" y="1970">5A?;0B=> " #G51=K9 3>4 " @0:B8:0 " 3@0=8G5==K5 <5AB0</text>
+  <rect class="card" x="90" y="1865" width="1260" height="190" rx="18" />
+  <text class="label" x="130" y="1930">6) Benefits Badges</text>
+  <text class="small" x="130" y="1970">Free | Full school year | Practical approach | Limited places</text>
 
-  <!-- News -->
-  <rect class="card" x="90" y="2090" width="1260" height="220" />
-  <text class="label" x="130" y="2160">7) >2>AB8 IT-C10</text>
-  <text class="small" x="130" y="2200">3 ?>A;54=85 ?C1;8:0F88 + AAK;:0 «!<>B@5BL 2A5 =>2>AB8»</text>
+  <rect class="card" x="90" y="2090" width="1260" height="220" rx="18" />
+  <text class="label" x="130" y="2160">7) News</text>
+  <text class="small" x="130" y="2200">Last 3 posts + link to all news</text>
 
-  <!-- FAQ -->
-  <rect class="card" x="90" y="2345" width="1260" height="180" />
-  <text class="label" x="130" y="2408">8) '0ABK5 2>?@>AK</text>
-  <text class="small" x="130" y="2446">?KB, AB>8<>ABL, :0: 70?8A0BLAO</text>
+  <rect class="card" x="90" y="2345" width="1260" height="180" rx="18" />
+  <text class="label" x="130" y="2408">8) FAQ</text>
+  <text class="small" x="130" y="2446">Experience needed? Cost? How to apply?</text>
 
-  <!-- Final CTA -->
   <rect class="head" x="90" y="2555" width="1260" height="150" rx="18" />
-  <text class="headText" x="130" y="2622">9) $8=0;L=K9 CTA  «0?8A0BLAO A59G0A»</text>
-  <text class="small" x="130" y="2660" fill="#dce6ff">!8;L=K9 ?@87K2 + 1>;LH0O :=>?:0 D>@<K</text>
+  <text class="headText" x="130" y="2622">9) Final CTA - Apply Now</text>
+  <text class="small" x="130" y="2660" fill="#dce6ff">Strong call to action with large button</text>
 
-  <!-- Footer -->
-  <rect class="card" x="90" y="2725" width="1260" height="65" />
-  <text class="small" x="130" y="2766">10) $CB5@: A09B, :>=B0:BK, N@848G5A:0O 8=D>@<0F8O, <5=N</text>
+  <rect class="card" x="90" y="2725" width="1260" height="65" rx="18" />
+  <text class="small" x="130" y="2766">10) Footer: website, contacts, legal info</text>
 </svg>
