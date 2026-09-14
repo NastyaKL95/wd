@@ -8,6 +8,8 @@
 - Скрипт первичной установки WordPress: `scripts/setup-wordpress.sh`
 - Docker-окружение: `docker-compose.yml`
 - SQL-скрипт (опционально): `db/it_cube_homepage_setup.sql`
+- Превью структуры главной: `docs/preview/homepage-structure-preview.svg`
+- Чек-лист замены контента: `docs/content/replace-before-publish.md`
 
 ## Что уже реализовано
 
