@@ -7,13 +7,21 @@
 
 get_header();
 ?>
-<main class="landing-section">
+<main id="content" class="content-main">
     <div class="container">
-        <h1>IT-Куб</h1>
-        <p>
-            Для главной страницы используйте шаблон front-page.php и назначьте статическую
-            страницу как главную в настройках WordPress.
-        </p>
+        <section class="content-shell">
+            <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : the_post(); ?>
+                    <article>
+                        <h1 class="content-title"><?php the_title(); ?></h1>
+                        <div class="content-body"><?php the_content(); ?></div>
+                    </article>
+                <?php endwhile; ?>
+            <?php else : ?>
+                <h1 class="content-title">IT-Куб</h1>
+                <p>Контент пока не добавлен. Используйте админку WordPress для публикации страниц и новостей.</p>
+            <?php endif; ?>
+        </section>
     </div>
 </main>
 <?php
