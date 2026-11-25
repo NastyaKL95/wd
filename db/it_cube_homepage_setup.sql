@@ -1,0 +1,156 @@
+-- IT-Куб: подготовка главной страницы набора в WordPress
+-- Важно: скрипт рассчитан на стандартный префикс таблиц wp_.
+-- Если у вас другой префикс, замените wp_ на свой.
+
+START TRANSACTION;
+
+-- 1) Активируем тему лендинга.
+INSERT INTO wp_options (option_name, option_value, autoload)
+VALUES ('template', 'it-cube-enrollment', 'yes')
+ON DUPLICATE KEY UPDATE option_value = 'it-cube-enrollment';
+
+INSERT INTO wp_options (option_name, option_value, autoload)
+VALUES ('stylesheet', 'it-cube-enrollment', 'yes')
+ON DUPLICATE KEY UPDATE option_value = 'it-cube-enrollment';
+
+-- 2) Создаём страницу для главной, если она ещё не существует.
+SET @front_page_id = (
+    SELECT ID
+    FROM wp_posts
+    WHERE post_name = 'it-cube-enrollment-home'
+      AND post_type = 'page'
+      AND post_status IN ('publish', 'draft', 'pending', 'private')
+    ORDER BY ID DESC
+    LIMIT 1
+);
+
+INSERT INTO wp_posts (
+    post_author,
+    post_date,
+    post_date_gmt,
+    post_content,
+    post_title,
+    post_excerpt,
+    post_status,
+    comment_status,
+    ping_status,
+    post_password,
+    post_name,
+    to_ping,
+    pinged,
+    post_modified,
+    post_modified_gmt,
+    post_content_filtered,
+    post_parent,
+    guid,
+    menu_order,
+    post_type,
+    post_mime_type,
+    comment_count
+)
+SELECT
+    1,
+    NOW(),
+    UTC_TIMESTAMP(),
+    'Главная страница формируется шаблоном front-page.php темы IT Cube Enrollment.',
+    'Главная IT-Куб',
+    '',
+    'publish',
+    'closed',
+    'closed',
+    '',
+    'it-cube-enrollment-home',
+    '',
+    '',
+    NOW(),
+    UTC_TIMESTAMP(),
+    '',
+    0,
+    'https://it-cube.zabedu.ru/?page_id=0',
+    0,
+    'page',
+    '',
+    0
+WHERE @front_page_id IS NULL;
+
+SET @front_page_id = IF(@front_page_id IS NULL OR @front_page_id = 0, LAST_INSERT_ID(), @front_page_id);
+
+-- 3) Создаём страницу новостей, если её ещё нет.
+SET @posts_page_id = (
+    SELECT ID
+    FROM wp_posts
+    WHERE post_name = 'novosti'
+      AND post_type = 'page'
+      AND post_status IN ('publish', 'draft', 'pending', 'private')
+    ORDER BY ID DESC
+    LIMIT 1
+);
+
+INSERT INTO wp_posts (
+    post_author,
+    post_date,
+    post_date_gmt,
+    post_content,
+    post_title,
+    post_excerpt,
+    post_status,
+    comment_status,
+    ping_status,
+    post_password,
+    post_name,
+    to_ping,
+    pinged,
+    post_modified,
+    post_modified_gmt,
+    post_content_filtered,
+    post_parent,
+    guid,
+    menu_order,
+    post_type,
+    post_mime_type,
+    comment_count
+)
+SELECT
+    1,
+    NOW(),
+    UTC_TIMESTAMP(),
+    'Здесь публикуются новости, мероприятия и достижения учеников IT-Куба.',
+    'Новости',
+    '',
+    'publish',
+    'closed',
+    'closed',
+    '',
+    'novosti',
+    '',
+    '',
+    NOW(),
+    UTC_TIMESTAMP(),
+    '',
+    0,
+    'https://it-cube.zabedu.ru/?page_id=0',
+    0,
+    'page',
+    '',
+    0
+WHERE @posts_page_id IS NULL;
+
+SET @posts_page_id = IF(@posts_page_id IS NULL OR @posts_page_id = 0, LAST_INSERT_ID(), @posts_page_id);
+
+-- 4) Включаем статическую главную страницу и страницу новостей.
+INSERT INTO wp_options (option_name, option_value, autoload)
+VALUES ('show_on_front', 'page', 'yes')
+ON DUPLICATE KEY UPDATE option_value = 'page';
+
+INSERT INTO wp_options (option_name, option_value, autoload)
+VALUES ('page_on_front', CAST(@front_page_id AS CHAR), 'yes')
+ON DUPLICATE KEY UPDATE option_value = CAST(@front_page_id AS CHAR);
+
+INSERT INTO wp_options (option_name, option_value, autoload)
+VALUES ('page_for_posts', CAST(@posts_page_id AS CHAR), 'yes')
+ON DUPLICATE KEY UPDATE option_value = CAST(@posts_page_id AS CHAR);
+
+-- 5) Контакты и SEO настраиваются в админке WordPress:
+-- Внешний вид -> Настройки IT-Куб.
+
+COMMIT;
